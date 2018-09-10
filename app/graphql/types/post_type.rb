@@ -8,14 +8,14 @@ module Types
     # fields should be queried in camel-case (this will be `truncatedPreview`)
     field :rating, Int, null: false
     # Fields can return lists of other objects:
-    # field :comments, [CommentType], null: true,
+    # field :comments, [Types::CommentType], null: true,
     #       # And fields can have their own descriptions:
     #       description: "This post's comments, or null if this post has comments disabled."
   end
 
   # app/graphql/comment_type.graphql
-  # class CommentType < GraphQL::Schema::Object
+  # class CommentType < Types::BaseObject
   #   field :id, ID, null: false
-  #   field :post, PostType, null: false
+  #   field :post, Types::PostType, null: false
   # end
 end
