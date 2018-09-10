@@ -1,8 +1,8 @@
 class CreatePosts < ActiveRecord::Migration[5.2]
   def change
     create_table :posts do |t|
-      t.sting :title
-      t.Int :rating
+      t.string :title
+      t.integer :rating
 
       t.timestamps
     end
